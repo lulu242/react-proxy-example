@@ -19,6 +19,14 @@ body, html {
   padding-top: 3rem;
 }
 
+.link {
+  padding: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(92, 115, 174);
+}
+
+
 .header {
   width: 100%;
   padding: 2%;

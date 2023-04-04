@@ -1,19 +1,19 @@
-const BookTable = ({books}) => {
+const BookTable = ({books, label}) => {
 
     if (books.length === 0) return null;
 
     return(
         <div className="table-wrapper">
             <div className="table-box">
-                <h2>My Books</h2>
+                <h2>My {label[0]}</h2>
                 <div className="table-scroll">
                     <table>
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Book</th>
+                            <th>{label[0]}</th>
                             <th>Category</th>
-                            <th>Author</th>
+                            <th>{label[2]}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -21,9 +21,9 @@ const BookTable = ({books}) => {
                                 return (
                                     <tr key = {index} className={index%2 === 0?'odd':'even'}>
                                         <td>{index + 1}</td>
-                                        <td>{book.book}</td>
+                                        <td>{book.book?book.book:book.todo}</td>
                                         <td>{book.category}</td>
-                                        <td>{book.author}</td>
+                                        <td>{book.author?String(book.author):String(book.isComplete)}</td>
                                     </tr>
                                 )
                             })}

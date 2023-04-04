@@ -1,4 +1,4 @@
-const DisplayBoard = ({numberOfBooks, getAllBook}) => {
+const DisplayBoard = ({numberOfBooks, getAllBook, label}) => {
     
     return(
         <div className="display-wrapper">
@@ -10,7 +10,7 @@ const DisplayBoard = ({numberOfBooks, getAllBook}) => {
                     </div>
                 </div>
                 <div className="get-button">
-                    <button onClick={() => getAllBook()}>Get all Books</button>
+                    <button onClick={() => getAllBook()}>{`Get all ${label[0]}s`}</button>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-const CreateBook = ({ onChangeForm, handleSubmit }) => {
+const CreateBook = ({ onChangeForm, handleSubmit, label }) => {
 
 
     return(
@@ -6,12 +6,12 @@ const CreateBook = ({ onChangeForm, handleSubmit }) => {
             <div className="form">
                 <form>
                     <div className="input-group">
-                        <label>book</label>
+                        <label>{label[0]}</label>
                         <input 
                             type="text" 
                             onChange={(e) => onChangeForm(e)} 
-                            name="book" 
-                            placeholder="book" 
+                            name={label[0]}
+                            placeholder={label[0]}
                         />
                     </div>
                     <div className="input-group">
@@ -24,12 +24,12 @@ const CreateBook = ({ onChangeForm, handleSubmit }) => {
                         />
                     </div>
                     <div className="input-group">
-                        <label>author</label>
+                        <label>{label[2]}</label>
                         <input 
                             type="text" 
                             onChange={(e) => onChangeForm(e)} 
-                            name="author"
-                            placeholder="author" 
+                            name={label[2]}
+                            placeholder={label[2]}
                         />
                     </div>
                     <button 
